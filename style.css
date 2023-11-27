@@ -1,11 +1,66 @@
 /* Colors */
 :root {
-    --text: hsl(220, 60%, 1%);
-    --background: hsl(0, 0%, 99%);
-    --primary: hsl(44, 10%, 21%);
-    --secondary: hsl(105, 10%, 84%);
-    --accent: hsl(46, 10%, 44%);
-  }
+  --text: hsl(220, 60%, 1%);
+  --background: hsl(0, 0%, 99%);
+  --dark-background: #1d1d1d;
+  --primary: hsl(44, 10%, 21%);
+  --secondary: hsl(105, 10%, 84%);
+  --accent: hsl(46, 10%, 44%);
+  --border-radius: 6px;
+}
+
+/* font */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400');
+
+body {
+  font-family: 'Poppins';
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Poppins';
+  font-weight: 700;
+}
+
+html {
+  font-size: 100%;
+}
+
+/* 16px */
+
+h1 {
+  font-size: 3.053rem;
+  /* 48.8px */
+}
+
+h2 {
+  font-size: 2.442rem;
+  /* 39.04px */
+}
+
+h3 {
+  font-size: 1.954rem;
+  /* 31.2px */
+}
+
+h4 {
+  font-size: 1.563rem;
+  /* 24.96px */
+}
+
+h5 {
+  font-size: 1.250rem;
+  /* 20px */
+}
+
+small {
+  font-size: 0.800rem;
+  /* 12.8px */
+}
 
 /* CSS Reset */
 /* makes sizing simpler */
@@ -24,6 +79,7 @@
   padding: 0;
   font: inherit;
 }
+
 /* min body height */
 
 body {
@@ -32,27 +88,168 @@ body {
 
 
 /* Navigation */
-nav{
+nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem 2.5rem;
+  border-bottom: solid var(--secondary);
 }
 
-a{
+.logo{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+a {
   color: var(--text);
   text-decoration: none;
 }
 
-.page-links{
+.page-links {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 /* Content */
-section{
-  padding: 10rem 2rem
+section {
+  padding: 2rem 6rem;
+  width: 100%;
+  height: 100svh;
 }
 
-xp-section{
-  
+.btn {
+  border-radius: var(--border-radius);
+  padding: 0.8rem;
+}
+
+.primary-btn {
+  color: var(--background);
+  background-color: var(--primary);
+  font-weight: 700;
+}
+
+.secondary-btn {
+  color: var(--primary);
+  background-color: var(--secondary);
+}
+
+/* Landing Section */
+.landing-content{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.landing-links{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.circle-thingy{
+  position: absolute;
+  width: 2rem;
+  z-index: 5;
+  color: aqua;
+}
+/* Projects Section */
+.project-list {
+  display: flex;
+  align-items: center;
+  padding-top: 4rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 20rem;
+  background-color: var(--secondary);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* XP Section */
+.xp-section {
+  background-color: var(--dark-background);
+  color: white;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.blob-thingy {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.education {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.xp {
+  grid-area: 1 / 2 / 3 / 3;
+}
+
+/* Contact Section */
+.contact-section{
+  background-color: var(--secondary);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 2rem;
+}
+
+.info-block{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark-background);
+  height: 60vh;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  gap: 1rem;
+  color: white;
+}
+
+.types{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+form > input, textarea{
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  border: solid var(--secondary);
+  background-color: transparent;
+  color: white;
+}
+
+form > button{
+  align-self: flex-end;
+  border: none;
+}
+
+/* Footer */
+footer{
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0rem;
 }

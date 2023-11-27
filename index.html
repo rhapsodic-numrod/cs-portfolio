@@ -20,16 +20,19 @@
             <a href="#">github</a>
             <a href="#">linkedIn</a>
         </div>
-
     </nav>
+
     <div class="content">
 
-        <section class="about-section">
-            <h1>Hi, I’m Profiliu I.M Nandjebo. I am a developer, UI/UX designer and database designer/developer based in
-                Windhoek, Namibia.</h1>
-            <div class="about-buttons">
-                <a href="#">Download Resume</a>
-                <a href="#">See my work</a>
+        <section class="landing-section">
+            <div class="landing-content">
+                <h1>Hi, I’m Profiliu I.M Nandjebo. I am a developer, UI/UX designer and database designer/developer
+                    based in
+                    Windhoek, Namibia.</h1>
+                <div class="landing-links">
+                    <a class="btn primary-btn" href="#">Download Resume</a>
+                    <a class="btn secondary-btn" href="#">See my work</a>
+                </div>
             </div>
             <div class="circle-thingy"></div>
         </section>
@@ -41,30 +44,35 @@
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos a voluptatem ratione aspernatur
                         explicabo obcaecati tempora nemo, minima corporis quo quas laborum libero illum qui rem
                         distinctio, odio reiciendis dolorum.</p>
-                    <div class="project-links"><a href="#">github</a><a href="#">Live Demo</a></div>
+                    <div class="project-links">
+                        <a class="btn" style="border: solid;" href="#">Github</a>
+                        <a class="btn primary-btn" href="#">Live Demo</a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="xp-section">
             <h2>Education & Work Experience</h2>
-            <div class="blob-thingy"></div>
+            <div class="parent">
+                <div class="blob-thingy"></div>
 
-            <div class="xp">
-                <h3>Work Experience</h3>
-                <div class="job">
-                    <h4>Software Engineering Intern</h4>
-                    <p>Goldstone Software Engineering Institute</p>
-                    <p>June 2023 - September 2023</p>
+                <div class="xp">
+                    <h3>Work Experience</h3>
+                    <div class="job">
+                        <h4>Software Engineering Intern</h4>
+                        <p>Goldstone Software Engineering Institute</p>
+                        <p>June 2023 - September 2023</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="education">
-                <h3>Education</h3>
-                <div class="qualification">
-                    <h4>Bachelors in Computer Science: Software Development</h4>
-                    <p>Namibia University of Science and Technology</p>
-                    <p>March 2021 - Present</p>
+                <div class="education">
+                    <h3>Education</h3>
+                    <div class="qualification">
+                        <h4>Bachelors in Computer Science: Software Development</h4>
+                        <p>Namibia University of Science and Technology</p>
+                        <p>March 2021 - Present</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -79,16 +87,32 @@
                 <a href="mailto:nandjebo.dev@gmail.com">nandjebo.dev@gmail.com</a>
             </div>
 
-            <form action="#" method="post">
-                <input type="text" name="fullName" id="fullName" placeholder="Your Name">
-                <input type="text" name="emailAddress" id="emailAddress" placeholder="Email">
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-                <button type="submit">Send Message</button>
+            <form action="#" method="get">
+                <h5>I am interested in...</h5>
+                
+                <div class="types">
+                    <div class="service-type">
+                        <input type="radio" name="serviceType" id="service-type">
+                        <label for="type">Development</label>
+                    </div>
+                    <div class="service-type">
+                        <input type="radio" name="serviceType" id="service-type">
+                        <label for="type">UI/UX</label>
+                    </div>
+                </div>
+
+                <input type="text" name="fullName" id="fullName" placeholder="Your Name" required>
+                <input type="text" name="emailAddress" id="emailAddress" placeholder="Email" required>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
+                <button class="btn secondary-btn" type="submit">Send Message</button>
             </form>
         </section>
 
     </div>
 
+    <footer>
+        <small>by Profiliu I.M Nandjebo</small>
+    </footer>
 </body>
 
 </html>
