@@ -47,3 +47,12 @@ a{
   display: flex;
   gap: 2rem;
 }
+
+/* Content */
+section{
+  padding: 10rem 2rem
+}
+
+xp-section{
+  
+}
