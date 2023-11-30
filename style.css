@@ -10,7 +10,7 @@
 }
 
 /* font */
-@import url('https://fonts.googleapis.com/css?family=Poppins:400');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 body {
   font-family: 'Poppins';
@@ -86,6 +86,16 @@ body {
   min-height: 100vh;
 }
 
+.icon{
+  width: auto;
+  height: 1rem;
+}
+
+.icon-links{
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
 
 /* Navigation */
 nav {
@@ -97,7 +107,7 @@ nav {
 }
 
 .logo{
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
 }
 
@@ -111,11 +121,23 @@ a {
   gap: 1rem;
 }
 
+.contact-links{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.8rem;
+}
+
+.contact-link{
+  width: auto;
+  height: 1.2rem;
+}
+
 /* Content */
 section {
   padding: 2rem 6rem;
   width: 100%;
-  height: 100svh;
+  height: 80svh;
 }
 
 .btn {
@@ -138,6 +160,8 @@ section {
 .landing-content{
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  height: 100%;
   gap: 2rem;
 }
 
@@ -168,6 +192,13 @@ section {
   background-color: var(--secondary);
   padding: 1rem;
   border-radius: var(--border-radius);
+  /* hover effect on project box */
+  float: left;
+  transition: box-shadow .3s;
+}
+
+.project:hover{
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
 }
 
 .project-links {
@@ -188,6 +219,7 @@ section {
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  height: 100%;
 }
 
 .blob-thingy {
@@ -200,6 +232,14 @@ section {
 
 .xp {
   grid-area: 1 / 2 / 3 / 3;
+}
+
+.job > small{
+  color: #e0e0e0;
+}
+
+.education > small{
+  color: #e0e0e0;
 }
 
 /* Contact Section */
@@ -240,6 +280,10 @@ form > input, textarea{
   border: solid var(--secondary);
   background-color: transparent;
   color: white;
+}
+
+textarea{
+  resize: none;
 }
 
 form > button{
