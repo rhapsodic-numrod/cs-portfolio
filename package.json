@@ -1,0 +1,17 @@
+{
+  "name": "html-css",
+  "version": "1.0.0",
+  "description": "my cs portfolio",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve"
+  },
+  "keywords": [
+    "html",
+    "css"
+  ],
+  "author": "Profiliu I.M Nandjebo",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
