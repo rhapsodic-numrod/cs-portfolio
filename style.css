@@ -301,6 +301,7 @@ form {
   flex-direction: column;
   background-color: var(--dark-background);
   min-height: 60vh;
+  width: auto;
   padding: 2rem;
   border-radius: var(--border-radius);
   gap: 1rem;
@@ -500,6 +501,19 @@ footer {
   .project-section {
     justify-content: center;
     align-items: center;
+  }
+
+  .service-type > label{
+    font-size: 0.9rem;
+  }
+
+  .types{
+    flex-direction: column;
+    gap: 0rem;
+  }
+
+  input{
+    width: auto;
   }
 }
 
