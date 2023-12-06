@@ -21,23 +21,40 @@
 
 <body>
     <nav>
-        <a class="logo" href="#">nandjebo.dev</a>
-        <div class="page-links">
+        <div class="sidebar">
+            <a onclick=hideSidebar() href="#"><i class="fa-solid fa-x"></i></a>
+            <div class="sidebar-page-links">
+                <a href="#projects">Projects</a>
+                <a href="#xp">Education & Experience</a>
+                <a href="#contact">Contact Me</a>
+            </div>
+            <div class="contact-links">
+                <a class="contact-link" href="https://github.com/rhapsodic-numrod" target="_blank">
+                    <i class="contact-link fa-brands fa-github"></i>
+                </a>
+
+                <a class="contact-link" href="https://www.linkedin.com/in/profiliu-nandjebo-b9928720a/" target="_blank">
+                    <i class="contact-link fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+
+        <a class="logo" href="/">nandjebo.dev</a>
+        <div class="page-links hideOnMobile">
             <a href="#projects">Projects</a>
             <a href="#xp">Education & Experience</a>
             <a href="#contact">Contact Me</a>
         </div>
-        <div class="contact-links">
-            <a style=" font-size: 1.5rem;" class="icon-links" href="https://github.com/rhapsodic-numrod"
-                target="_blank">
+        <div class="contact-links hideOnMobile">
+            <a class="contact-link" href="https://github.com/rhapsodic-numrod" target="_blank">
                 <i class="contact-link fa-brands fa-github"></i>
             </a>
 
-            <a style=" font-size: 1.5rem;" class="icon-links"
-                href="https://www.linkedin.com/in/profiliu-nandjebo-b9928720a/" target="_blank">
+            <a class="contact-link" href="https://www.linkedin.com/in/profiliu-nandjebo-b9928720a/" target="_blank">
                 <i class="contact-link fa-brands fa-linkedin"></i>
             </a>
         </div>
+        <a class="menu-btn" onclick=showSidebar() href="#"><i class="fa-solid fa-bars"></i></a>
     </nav>
 
     <div class="content">
@@ -73,6 +90,21 @@
                             Github
                         </a>
                         <a class="btn primary-btn" href="https://nandjebo-dev.vercel.app/">Live Demo</a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h3>rhapsodyarts</h3>
+                    <p>
+                        my photography portfolio <br /> a gallery some of the images I have made
+                    </p>
+                    <div class="project-links">
+                        <!-- <a class="btn icon-links" style="border: solid;"
+                            href="https://github.com/rhapsodic-numrod/cs-portfolio" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                            Github
+                        </a> -->
+                        <a class="btn primary-btn" href="https://rhapsodyarts.vercel.app/" target="_blank">Live Demo</a>
                     </div>
                 </div>
             </div>
@@ -135,7 +167,7 @@
                 </div>
                 <input type="text" name="fullName" id="fullName" placeholder="Your Name" required>
                 <input type="text" name="emailAddress" id="emailAddress" placeholder="Email" required>
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
+                <textarea name="message" id="message" cols="30" rows="5" placeholder="Message" required></textarea>
                 <button class="btn secondary-btn" type="submit">Send Message</button>
             </form>
         </section>
@@ -145,6 +177,18 @@
     <footer>
         <small>by Profiliu I.M Nandjebo</small>
     </footer>
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector(".sidebar")
+            sidebar.style.display = "flex"
+        }
+
+        function hideSidebar(){
+            const sidebar = document.querySelector(".sidebar")
+            sidebar.style.display = "none"
+        }
+    </script>
 </body>
 
 </html>
